@@ -1,6 +1,6 @@
 # basic_navigator
 
-A Flutter application of Basic Navigator
+A Flutter application to learn Basic Navigator
 
 ## Getting Started
 
