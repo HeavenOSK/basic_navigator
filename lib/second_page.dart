@@ -5,21 +5,25 @@ class SecondPage extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
-  String receivedValue = 'I\'ll receive some value!';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('SecondPage')),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(receivedValue),
             RaisedButton(
-              child: Text('Next'),
-              onPressed: () {},
-            )
+              child: Text('Go Back'),
+              onPressed: () {
+                Navigator.of(context).pop(['Cats', 'Dogs']);
+              },
+            ),
+            RaisedButton(
+              child: Text('Go Back'),
+              onPressed: () {
+                Navigator.of(context).pop('Cats');
+              },
+            ),
           ],
         ),
       ),
