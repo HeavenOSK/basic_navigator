@@ -6,11 +6,11 @@ class SecondTextInputPage extends StatefulWidget {
 }
 
 class SecondTextInputPageState extends State<SecondTextInputPage> {
-  String inputtedValue;
+  String inputValue;
 
   @override
   void initState() {
-    inputtedValue = '';
+    inputValue = '';
     super.initState();
   }
 
@@ -28,10 +28,10 @@ class SecondTextInputPageState extends State<SecondTextInputPage> {
             ),
             child: TextField(
               onChanged: (value) {
-                inputtedValue = value;
+                inputValue = value;
               },
               onEditingComplete: () {
-                Navigator.of(context).pop(inputtedValue);
+                Navigator.of(context).pop(inputValue);
               },
               autofocus: true,
               autocorrect: false,
