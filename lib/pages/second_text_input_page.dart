@@ -17,7 +17,7 @@ class SecondTextInputPageState extends State<SecondTextInputPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('SecondPage')),
+      appBar: AppBar(title: Text('Second Page')),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
