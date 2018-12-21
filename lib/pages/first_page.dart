@@ -1,7 +1,8 @@
-import 'package:basic_navigator/widgets/sample_dialog.dart';
-import 'package:basic_navigator/pages/second_simple_page.dart';
-import 'package:basic_navigator/pages/second_text_input_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:basic_navigator/pages/second_page.dart';
+import 'package:basic_navigator/pages/second_text_input_page.dart';
+import 'package:basic_navigator/widgets/sample_dialog.dart';
 
 class FirstPage extends StatelessWidget {
   FirstPage({Key key}) : super(key: key);
@@ -28,7 +29,7 @@ class FirstPage extends StatelessWidget {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) {
-                              return SecondSimplePage();
+                              return SecondPage();
                             },
                           ),
                         );
@@ -45,7 +46,7 @@ class FirstPage extends StatelessWidget {
                         await Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) {
-                              return SecondSimplePage();
+                              return SecondPage();
                             },
                           ),
                         );
@@ -71,11 +72,12 @@ class FirstPage extends StatelessWidget {
                           ),
                         );
                         if (result != null) {
+                          final contentText = 'I received ' + result + ' !';
                           showDialog(
                             context: context,
                             builder: (context) {
                               return SampleDialog(
-                                contentText: 'I received $result !',
+                                contentText: contentText,
                               );
                             },
                           );
@@ -99,5 +101,30 @@ Widget _buildContents(List<Widget> children) {
     child: Column(
       children: children,
     ),
+  );
+}
+
+Widget _buildStack() {
+  return Stack(
+    children: <Widget>[
+      Positioned(
+        left: 20.0,
+        top: 20.0,
+        width: 100.0,
+        height: 100.0,
+        child: Container(
+          color: Colors.indigo,
+        ),
+      ),
+      Positioned(
+        left: 100.0,
+        top: 100.0,
+        right: 100.0,
+        bottom: 200.0,
+        child: Container(
+          color: Colors.cyan,
+        ),
+      ),
+    ],
   );
 }
