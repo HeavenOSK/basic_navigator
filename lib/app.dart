@@ -1,4 +1,4 @@
-import 'package:basic_navigator/first_page.dart';
+import 'package:basic_navigator/pages/first_page.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
