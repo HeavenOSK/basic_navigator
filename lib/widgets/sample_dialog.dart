@@ -10,7 +10,7 @@ class SampleDialog extends StatelessWidget {
     final content = contentText ?? 'I\'m back!';
     return AlertDialog(
       title: Text(
-        'Back to First Page',
+        'Alert',
         style: Theme.of(context).textTheme.title,
       ),
       content: Text(
