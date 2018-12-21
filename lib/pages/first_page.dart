@@ -103,28 +103,3 @@ Widget _buildContents(List<Widget> children) {
     ),
   );
 }
-
-Widget _buildStack() {
-  return Stack(
-    children: <Widget>[
-      Positioned(
-        left: 20.0,
-        top: 20.0,
-        width: 100.0,
-        height: 100.0,
-        child: Container(
-          color: Colors.indigo,
-        ),
-      ),
-      Positioned(
-        left: 100.0,
-        top: 100.0,
-        right: 100.0,
-        bottom: 200.0,
-        child: Container(
-          color: Colors.cyan,
-        ),
-      ),
-    ],
-  );
-}
